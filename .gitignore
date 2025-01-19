@@ -1,0 +1,5 @@
+# Node modules directory
+backend/node_modules/
+
+Frontend/node_modules/
+Frontend/node_modules/.angular
