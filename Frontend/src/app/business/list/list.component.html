@@ -1,0 +1,46 @@
+<div class="container mt-4">
+  <div class="row">
+    <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="assets\slider\slider1.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="assets\slider\slider2.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="assets\slider\slider3.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="assets\slider\slider4.jpg" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+  </div>
+</div>
+
+ 
+
+<div class="business-list-container">
+  <h2>Service Providers</h2>
+  <div class="business-card" *ngFor="let business of businesses">
+    <div class="business-details">
+      <h3>{{ business.name }}</h3>
+      <p><strong>Category:</strong> {{ business.category }}</p>
+      <p><strong>Address:</strong> {{ business.address }}</p>
+      <p *ngIf="business.phone"><strong>Phone:</strong> {{ business.phone }}</p>
+      <p *ngIf="business.email"><strong>Email:</strong> {{ business.email }}</p>
+      <p><strong>Rating:</strong> {{ business.rating }} / 5</p>
+      <a [routerLink]="['/business', business._id]" class="details-link btn btn-info" >View Details</a>
+    </div>
+   </div>
+</div>

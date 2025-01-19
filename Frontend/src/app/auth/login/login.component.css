@@ -1,0 +1,11 @@
+.error {
+    color: red;
+  }
+  
+  .vh-100 {
+    min-height: 100vh;
+  }
+  .card {
+    border-radius: 10px;
+  }
+  

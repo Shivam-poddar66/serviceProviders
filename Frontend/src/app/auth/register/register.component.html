@@ -1,0 +1,48 @@
+<div class="register-container">
+  <h2 >Create an Account</h2>
+  <form (ngSubmit)="onRegister()" class="register-form">
+    <div class="form-group">
+      <label for="name">Full Name</label>
+      <input
+        type="text"
+        id="name"
+        [(ngModel)]="name"
+        name="name"
+        class="form-control"
+        placeholder="Enter your full name"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="email">Email Address</label>
+      <input
+        type="email"
+        id="email"
+        [(ngModel)]="email"
+        name="email"
+        class="form-control"
+        placeholder="Enter your email"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input
+        type="password"
+        id="password"
+        [(ngModel)]="password"
+        name="password"
+        class="form-control"
+        placeholder="Enter a secure password"
+        required
+      />
+    </div>
+    <button type="submit" class="btn btn-primary">Sign Up</button>
+    <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
+  </form>
+
+  <div class="login-redirect">
+    <p>Already have an account?</p>
+    <button class="btn btn-secondary" (click)="navigateToLogin()">Login</button>
+  </div>
+</div>

@@ -1,0 +1,47 @@
+<div class="container mt-4">
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <h2 class="card-title text-primary">{{ business?.name }}</h2>
+        <hr />
+        <div class="row">
+          <div class="col-md-6">
+            <p>
+              <strong>Address:</strong> {{ business?.address }}
+            </p>
+            <p>
+              <strong>Phone:</strong>
+              <a href="tel:{{ business?.phone }}" class="text-decoration-none">{{ business?.phone }}</a>
+            </p>
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:{{ business?.email }}" class="text-decoration-none">{{ business?.email }}</a>
+            </p>
+          </div>
+          <div class="col-md-6 text-center">
+            <img
+              src="assets/business-placeholder.jpg"
+              alt="{{ business?.name }}"
+              class="img-fluid rounded shadow-sm"
+              style="max-height: 200px;"
+            />
+          </div>
+        </div>
+        <hr />
+        <div class="d-flex justify-content-end gap-3">
+          <a
+            [routerLink]="['/business', business?._id, 'reviews']"
+            class="btn btn-outline-primary btn-sm"
+          >
+            View Reviews
+          </a>
+          <a
+            [routerLink]="['/business', business?._id, 'add-review']"
+            class="btn btn-primary btn-sm"
+          >
+            Add Review
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  

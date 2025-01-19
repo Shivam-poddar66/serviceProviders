@@ -1,0 +1,11 @@
+<h2>Reviews</h2>
+<ul *ngIf="reviews.length > 0; else noReviews">
+  <li *ngFor="let review of reviews">
+    <strong>Rating:</strong> {{ review.rating }} / 5<br />
+    <strong>Comment:</strong> {{ review.comment }}<br />
+    <hr />
+  </li>
+</ul>
+<ng-template #noReviews>
+  <p>No reviews yet for this business.</p>
+</ng-template>

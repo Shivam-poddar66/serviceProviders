@@ -1,0 +1,14 @@
+<h2>Add Review</h2>
+<form (ngSubmit)="onSubmit()">
+  <label for="rating">Rating:</label>
+  <select [(ngModel)]="rating" name="rating" required>
+    <option *ngFor="let r of [1, 2, 3, 4, 5]" [value]="r">{{ r }}</option>
+  </select>
+  <br />
+  <label for="comment">Comment:</label>
+  <textarea [(ngModel)]="comment" name="comment" rows="4" required></textarea>
+  <br />
+  <button type="submit">Submit Review</button>
+</form>
+<p *ngIf="successMessage" class="success">{{ successMessage }}</p>
+<p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>

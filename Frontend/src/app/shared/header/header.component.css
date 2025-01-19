@@ -1,0 +1,45 @@
+  /* .sidenav-container {
+    height: 100vh; 
+     background: rgb(230, 213, 102); 
+  }   */
+
+  .mat-sidenav{
+    width: 100%;
+    background: rgb(230, 213, 102);
+    height: 30%;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .spacer {
+    flex: 1 1 auto;
+  }
+  
+  .desktop-nav a.active-link {
+    color: #3f51b5;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  
+  .mobile-sidenav a.active-sidenav-link {
+    color: #3f51b5;
+    font-weight: bold;
+  }
+  
+  .menu-button {
+    display: none;
+  }
+  
+  .nodecor{
+    text-decoration: none;
+  }
+  
+  @media (max-width: 960px) {
+    .menu-button {
+      display: inline-block;
+    }
+  }
+  
